@@ -1,0 +1,14 @@
+<h1>DBZ Personajes</h1>
+<hr />
+
+<!-- PARA PODER EMITIR EL EVENTO SE COLOCA ENTRE PARENTESIS Y LLAMAMOS AL METODO QUE ESTA DEL LADO EN ESTE CASO onDeelteCharacter -->
+<div class="row">
+  <div class="col">
+    <dbz-list
+    [characterList]="characters"
+    (onDelete)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+  <div class="col">
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>
